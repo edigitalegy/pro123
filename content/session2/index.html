@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Animal AR</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!--
+    <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/2.2.1/aframe/build/aframe-ar.js"></script>
+    -->
+    <link rel="stylesheet" href="./styles.css" />
+
+  </head>
+  <body>
+    <div id="status"></div>
+    <button id="animalSoundBtn" class="animal-button">
+      <i class="bi bi-volume-up-fill"></i>
+    </button>
+    
+    <a-scene embedded arjs>
+      <!-- DOG Marker -->
+      <a-marker type="pattern" url="./pattern/dog.patt" id="dogMarker">
+        <a-image id="dog-image-element" src="./image/dog.png" position="0 0.01 0" rotation="-90 0 0" width="1" height="1"></a-image>
+      </a-marker>
+
+      <!-- CAT Marker -->
+      <a-marker type="pattern" url="./pattern/cat.patt" id="catMarker">
+        <a-image src="./image/cat.png" position="0 0.01 0" rotation="-90 0 0" width="1" height="1"></a-image>
+      </a-marker>
+
+      <!-- LION Marker -->
+      <a-marker type="pattern" url="./pattern/lion.patt" id="lionMarker">
+        <a-image src="./image/lion.png" position="0 0.01 0" rotation="-90 0 0" width="1" height="1"></a-image>
+      </a-marker>
+
+      <!-- MONKEY Marker -->
+      <a-marker type="pattern" url="./pattern/monkey.patt" id="monkeyMarker">
+        <a-image src="./image/monkey.png" position="0 0.01 0" rotation="-90 0 0" width="1" height="1"></a-image>
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+
+    <!-- Animal Sounds -->
+    <audio id="dogSound" src="./sound/dog.mp3"></audio>
+    <audio id="catSound" src="./sound/cat.mp3"></audio>
+    <audio id="lionSound" src="./sound/lion.mp3"></audio>
+    <audio id="monkeySound" src="./sound/monkey.mp3"></audio>
+
+    <!-- Your Script -->
+    <script src="./script.js"></script>
+  </body>
+</html>
