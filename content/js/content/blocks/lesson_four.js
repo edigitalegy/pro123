@@ -22,12 +22,17 @@ function btn_four(button)
 let num =lesson_four.findIndex(b => b.id === button.id);
 btn_txt=lesson_four[num].text;
 
-  if(button.id === "4act1"){loadForm('');}
-  if(button.id === "4act2"){loadForm('');}
-  if(button.id === "4act3"){loadForm('');}
-  if(button.id === "4act4"){loadForm('');}
-  if(button.id === "4act5"){loadForm('');}
-  if(button.id === "4act6"){loadForm('');}
+switch (button.id) {
+  case "4act1": loadForm('./session19/index.html'); break;
+  case "4act2": loadForm('./session20/index.html'); break;
+  case "4act3": loadForm('./session21/index.html'); break;
+  case "4act4": loadForm('./session22/index.html'); break;
+  case "4act5": loadForm('./session23/index.html'); break;
+  case "4act6": loadForm('./session24/index.html'); break;
+}
+if (mainVideo.src) {
+  videorun(); // Ensure videorun() exists
+}
 }
 
 /*************************************events ele******************************************/

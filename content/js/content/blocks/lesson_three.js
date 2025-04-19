@@ -22,12 +22,17 @@ function btn_three(button)
 let num =lesson_three.findIndex(b => b.id === button.id);
 btn_txt=lesson_three[num].text;
 
-  if(button.id === "3act1"){loadForm('');}
-  if(button.id === "3act2"){loadForm('');}
-  if(button.id === "3act3"){loadForm('');}
-  if(button.id === "3act4"){loadForm('');}
-  if(button.id === "3act5"){loadForm('');}
-  if(button.id === "3act6"){loadForm('');}
+switch (button.id) {
+  case "3act1": loadForm('./session13/index.html'); break;
+  case "3act2": loadForm('./session14/index.html'); break;
+  case "3act3": loadForm('./session15/index.html'); break;
+  case "3act4": loadForm('./session16/index.html'); break;
+  case "3act5": loadForm('./session17/index.html'); break;
+  case "3act6": loadForm('./session18/index.html'); break;
+}
+if (mainVideo.src) {
+  videorun(); // Ensure videorun() exists
+}
 }
 
 /*************************************events ele******************************************/
