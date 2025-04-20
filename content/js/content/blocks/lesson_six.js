@@ -21,12 +21,18 @@ function btn_six(button)
 {
 let num =lesson_six.findIndex(b => b.id === button.id);
 btn_txt=lesson_six[num].text;
-  if(button.id === "6act1"){loadForm('');}
-  if(button.id === "6act2"){loadForm('');}
-  if(button.id === "6act3"){loadForm('');}
-  if(button.id === "6act4"){loadForm('');}
-  if(button.id === "6act5"){loadForm('');}
-  if(button.id === "6act6"){loadForm('');}
+
+switch (button.id) {
+  case "6act1": loadForm('./session32/index.html'); break;
+  case "6act2": loadForm('./session33/index.html'); break;
+  case "6act3": loadForm('./session34/index.html'); break;
+  case "6act4": loadForm('./session35/index.html'); break;
+  case "6act5": loadForm('./session36/index.html'); break;
+  case "6act6": loadForm('./session37/index.html'); break;
+}
+if (mainVideo.src) {
+  videorun(); // Ensure videorun() exists
+}
 }
 
 /*************************************events ele******************************************/

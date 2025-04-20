@@ -23,13 +23,19 @@ function btn_five(button)
 let num =lesson_five.findIndex(b => b.id === button.id);
 btn_txt=lesson_five[num].text;
 
-  if(button.id === "5act1"){loadForm('');}
-  if(button.id === "5act2"){loadForm('');}
-  if(button.id === "5act3"){loadForm('');}
-  if(button.id === "5act4"){loadForm('');}
-  if(button.id === "5act5"){loadForm('');}
-  if(button.id === "5act6"){loadForm('');}
-  if(button.id === "5act7"){loadForm('');}
+switch (button.id) {
+  case "5act1": loadForm('./session25/index.html'); break;
+  case "5act2": loadForm('./session26/index.html'); break;
+  case "5act3": loadForm('./session27/index.html'); break;
+  case "5act4": loadForm('./session28/index.html'); break;
+  case "5act5": loadForm('./session29/index.html'); break;
+  case "5act6": loadForm('./session30/index.html'); break;
+  case "5act7": loadForm('./session31/index.html'); break;
+
+}
+if (mainVideo.src) {
+  videorun(); // Ensure videorun() exists
+}
 }
 
 /*************************************events ele******************************************/
